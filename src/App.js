@@ -1,36 +1,36 @@
 import React, { Component } from 'react';
-import {GridGenerator, Layout, Hexagon, Text, Pattern, HexUtils } from 'react-hexgrid';
-import './GameLayout.css';
+import {HexGrid, Hex, Layout, Hexagon, Text, Pattern, Path } from 'react-hexgrid';
+// import './GameLayout.css';
 
 class App extends Component {
-
-  constructor(props){
-    super(props)
-    const hexagons = GridGenerator.hexagon(2)
-    this.state = { hexagons };
-  }
-
-
   render() {
-    let { hexagons } = this.state;
     return (
-      <Layout className="game" size={{x: 10, y: 10}} flat={true} spacing={1.08 } origin={{x: -30, y: 0}}>
-      {
-        hexagons.map((hex, i) => (
-          <Hexagon 
-            key={i}
-            q={hex.q}
-            r={hex.r}
-            s={hex.s}
-            fill={(hex.image) ? HexUtils.getID(hex) : null}
-            data={hex}
-            >
-              <Text>{HexUtils.getID(hex)}</Text>
-              { hex.image && <Pattern id={HexUtils.getID(hex)} link={hex.image} /> }
+      <div className="App">
+        <HexGrid width={1200} height={800} viewBox="-50 -50 100 100">
+          {/* Grid with manually inserted hexagons */}
+          <Layout size={{ x: 10, y: 10 }} flat={true} spacing={1.1} origin={{ x: 0, y: 0 }}>
+            <Hexagon q={0} r={0} s={0} />
+            {/* Using pattern (defined below) to fill the hexagon */}
+            <Hexagon q={0} r={-1} s={1} fill="pat-1" />
+            <Hexagon q={0} r={1} s={-1} />
+            <Hexagon q={1} r={-1} s={0}>
+              {/* <Text>1, -1, 0</Text> */}
             </Hexagon>
-        ))
-      }
-      </Layout>
+            <Hexagon q={1} r={0} s={-1}>
+              {/* <Text>1, 0, -1</Text> */}
+            </Hexagon>
+            {/* Pattern and text */}
+            <Hexagon q={-1} r={1} s={0} fill="pat-2">
+              {/* <Text>-1, 1, 0</Text> */}
+            </Hexagon>
+            <Hexagon q={-1} r={0} s={1} />
+            <Hexagon q={-2} r={0} s={1} />
+            {/* <Path start={new Hex(0, 0, 0)} end={new Hex(-2, 0, 1)} /> */}
+          </Layout>
+          <Pattern id="pat-1" link="http://lorempixel.com/400/400/cats/${index%10}/" />
+          <Pattern id="pat-2" link="http://cat-picture2" />
+        </HexGrid>
+      </div>
     );
   }
 }
