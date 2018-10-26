@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {GridGenerator, Layout, Hexagon, Text, Pattern, HexUtils } from 'react-hexgrid';
+import './GameLayout.css';
 
 class App extends Component {
 
@@ -21,8 +22,11 @@ class App extends Component {
             q={hex.q}
             r={hex.r}
             s={hex.s}
+            fill={(hex.image) ? HexUtils.getID(hex) : null}
+            data={hex}
             >
               <Text>{HexUtils.getID(hex)}</Text>
+              { hex.image && <Pattern id={HexUtils.getID(hex)} link={hex.image} /> }
             </Hexagon>
         ))
       }
