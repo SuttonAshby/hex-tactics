@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {GridGenerator, Layout, Hexagon, Text, Pattern, HexUtils } from 'react-hexgrid';
 
 class App extends Component {
+
+  constructor(props){
+    super(props)
+    const hexagons = GridGenerator.hexagon(2)
+    this.state = { hexagons };
+  }
+
+
   render() {
+    let { hexagons } = this.state;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Layout className="game" size={{x: 10, y: 10}} flat={true} spacing={1.08 } origin={{x: -30, y: 0}}>
+      {
+        hexagons.map((hex, i) => (
+          <Hexagon 
+            key={i}
+            q={hex.q}
+            r={hex.r}
+            s={hex.s}
+            >
+              <Text>{HexUtils.getID(hex)}</Text>
+            </Hexagon>
+        ))
+      }
+      </Layout>
     );
   }
 }
