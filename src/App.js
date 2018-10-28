@@ -20,8 +20,8 @@ class App extends Component {
             <Hexagon q={-1} r={2} s={-1} ><Text>-1, 2, -1</Text></Hexagon>
             <Hexagon q={-2} r={2} s={0} ><Text>-2, 2, 0</Text></Hexagon>
             <Hexagon q={-2} r={1} s={1} ><Text>-2, 1, 1</Text></Hexagon>
-            <Hexagon q={-2} r={0} s={-2} ><Text>-2, 0, -2</Text></Hexagon>
-            <Hexagon q={-1} r={-1} s={-1} ><Text>-1, -1, -1</Text></Hexagon>
+            <Hexagon q={-2} r={0} s={2} ><Text>-2, 0, 2</Text></Hexagon>
+            <Hexagon q={-1} r={-1} s={2} ><Text>-1, -1, 2</Text></Hexagon>
             <Hexagon q={0} r={-2} s={2} ><Text>0, -2, 2</Text></Hexagon>
             <Hexagon q={1} r={-2} s={1} ><Text>1, -2, 1</Text></Hexagon>
             <Hexagon q={2} r={-2} s={0} ><Text>2, -2, 0</Text></Hexagon>
@@ -33,10 +33,10 @@ class App extends Component {
             <Hexagon q={-2} r={3} s={-1}><Text>-2, 3, -1</Text></Hexagon>
             <Hexagon q={-3} r={3} s={0}><Text>-3, 3, 0</Text></Hexagon>
             <Hexagon q={-3} r={2} s={1}><Text>-3, 2, 1</Text></Hexagon>
-            <Hexagon q={-3} r={1} s={-3}><Text>-3, 1, -3</Text></Hexagon>
-            <Hexagon q={-3} r={0} s={-3}><Text>-3, 0, -3</Text></Hexagon>
-            <Hexagon q={-2} r={-1} s={0}><Text>-2, -1, 0</Text></Hexagon>
-            <Hexagon q={-1} r={-2} s={-2}><Text>-1, -2, -2</Text></Hexagon>
+            <Hexagon q={-3} r={1} s={2}><Text>-3, 1, 2</Text></Hexagon>
+            <Hexagon q={-3} r={0} s={3}><Text>-3, 0, 3</Text></Hexagon>
+            <Hexagon q={-2} r={-1} s={3}><Text>-2, -1, 3</Text></Hexagon>
+            <Hexagon q={-1} r={-2} s={3}><Text>-1, -2, 3</Text></Hexagon>
             <Hexagon q={0} r={-3} s={3}><Text>0, -3, 3</Text></Hexagon>
             <Hexagon q={1} r={-3} s={2}><Text>1, -3, 2</Text></Hexagon>
             <Hexagon q={2} r={-3} s={1}><Text>2, -3, 1</Text></Hexagon>
@@ -46,6 +46,18 @@ class App extends Component {
             <Hexagon q={3} r={0} s={-3}><Text>3, 0, -3</Text></Hexagon>
             <Hexagon q={2} r={1} s={-3}><Text>2, 1, -3</Text></Hexagon>
             <Hexagon q={1} r={2} s={-3}><Text>1, 2, -3</Text></Hexagon>
+            <Hexagon q={0} r={4} s={-4}><Text>0, 4, -4</Text></Hexagon>
+            <Hexagon q={-1} r={4} s={-3}><Text>-1, 4, -3</Text></Hexagon>
+            <Hexagon q={-2} r={4} s={-2}><Text>-2, 4, -2</Text></Hexagon>
+            <Hexagon q={-3} r={4} s={-1}><Text>-3, 4, -1</Text></Hexagon>
+            <Hexagon q={-4} r={4} s={0}><Text>-4, 4, 0</Text></Hexagon>
+            <Hexagon q={-4} r={3} s={1}><Text>-4, 3, 1</Text></Hexagon>
+            <Hexagon q={-4} r={2} s={2}><Text>-4, 2, 2</Text></Hexagon>
+            <Hexagon q={-4} r={1} s={3}><Text>-4, 1, 3</Text></Hexagon>
+            <Hexagon q={-4} r={0} s={4}><Text>-4, 0, 4</Text></Hexagon>
+            <Hexagon q={-3} r={-1} s={4}><Text>-3, -1, 4</Text></Hexagon>
+            <Hexagon q={-2} r={-2} s={4}><Text>-2, -2, 4</Text></Hexagon>
+            <Hexagon q={-1} r={-3} s={4}><Text>-1, -3, 4</Text></Hexagon>
           </Layout>
         </HexGrid>
       </div>
