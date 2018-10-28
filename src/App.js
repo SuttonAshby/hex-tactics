@@ -70,6 +70,15 @@ class App extends Component {
             <Hexagon q={3} r={1} s={-4}><Text>3, 1, -4</Text></Hexagon>
             <Hexagon q={2} r={2} s={-4}><Text>2, 2, -4</Text></Hexagon>
             <Hexagon q={1} r={3} s={-4}><Text>1, 3, -4</Text></Hexagon>
+            <Hexagon q={-4} r={-1} s={5}><Text>-4, -1, 5</Text></Hexagon>
+            <Hexagon q={-3} r={-2} s={5}><Text>-3, -2, 5</Text></Hexagon>
+            <Hexagon q={-2} r={-3} s={5}><Text>-2, -3, 5</Text></Hexagon>
+            <Hexagon q={-1} r={-4} s={5}><Text>-1, -4, 5</Text></Hexagon>
+            <Hexagon q={0} r={-5} s={5}><Text>0, -5, 5</Text></Hexagon>
+            <Hexagon q={1} r={-5} s={4}><Text>1, -5, 4</Text></Hexagon>
+            <Hexagon q={2} r={-5} s={3}><Text>2, -5, 3</Text></Hexagon>
+            <Hexagon q={3} r={-5} s={2}><Text>3, -5, 2</Text></Hexagon>
+            <Hexagon q={4} r={-5} s={1}><Text>4, -5, 1</Text></Hexagon>
           </Layout>
         </HexGrid>
       </div>
